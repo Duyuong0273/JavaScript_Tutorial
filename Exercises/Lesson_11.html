@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array and loops</title>
+  </head>
+  <body>
+    <!-- 11a. -->
+
+    <script>
+      // const nums = [10, 20, 30];
+
+      // nums[2] = 99;
+
+      // console.log(nums);
+
+      // an alternative solution is:
+      //num[nums.length - 1] = 99;
+    </script>
+
+    <!-- 11b. -->
+
+    <script>
+      // function getlastValue(array) {
+      //   return array[lastIndex];
+      // }
+
+      // console.log(getlastValue([1, 20, 22, 24, 5]));
+      // console.log(getlastValue(["hi", "Hello", "hey"]));
+    </script>
+
+    <!-- 11c. -->
+
+    <script>
+      // function arraySwap(array) {
+      //   const lastIndex = array.lenght - 1;
+
+      //   // chúng ta cần lưu các giá trị
+      //   // Trao đổi. Mặc khác nếu chúng ta trao đổi trực tiếp
+      //   //chúng ta sẽ mất một trong các giá trị
+
+      //   const lastValue = array[lastIndex];
+      //   const firstValue = array[0];
+
+      //   array[0] = lastValue;
+
+      //   return array;
+      // }
+
+      // console.log(arraySwap([1, 20, 22, 24, 5]));
+      // console.log(arraySwap(["hi", "hello", "hey"]));
+    </script>
+
+    <!-- 11d. -->
+
+    <script>
+      // for (let i = 0; i <= 10; i += 2) {
+      //   console.log(i);
+      // }
+    </script>
+
+    <!-- 11e. -->
+
+    <script>
+      // for (let i = 5; i >= 0; i--) {
+      //   console.log(i);
+      // }
+    </script>
+
+    <!-- 11f -->
+
+    <script>
+      // let i = 0;
+      // while (i <= 10) {
+      //   console.log(i);
+      //   i += 2;
+      // }
+
+      // let i = 5;
+      // while (i >= 0) {
+      //   console.log(i);
+      //   i--;
+      // }
+    </script>
+
+    <!-- 11g. -->
+
+    <script>
+      // const array = [1, 2, 3];
+      // const result = [];
+
+      // for (let i = 0; i < array.length; i++) {
+      //   result.push(array[i] + 1);
+      // }
+
+      // console.log(result);
+    </script>
+
+    <!-- 11h. -->
+
+    <script>
+      // function addOne(array) {
+      //   const result = [];
+
+      //   for (let i = 0; i < array.length; i++) {
+      //     result.push(array[i] + 1);
+      //   }
+      //   return result;
+      // }
+
+      // console.log(addOne([1, 2, 3]));
+      // console.log(addOne([-2, -1, 0, 99]));
+    </script>
+
+    <!-- 11i. -->
+
+    <script>
+      // function addNum(array, num) {
+      //   const result = [];
+
+      //   for (let i = 0; i < array.length; i++) {
+      //     result.push(array[i] + num);
+      //   }
+      //   return result;
+      // }
+
+      // console.log(addNum([1, 2, 3], 2));
+      // console.log(addNum([1, 2, 3], 3));
+      // console.log(addNum([-2, -1, 0, 99], 2));
+    </script>
+
+    <!-- 11j. -->
+
+    <script>
+      // function addArrays(array1, array2) {
+      //   const result = [];
+
+      //   for (let i = 0; i < array1.length; i++) {
+      //     result.push(array1[i] + array2[i]);
+      //   }
+      //   return result;
+      // }
+      // console.log(addArrays([1, 1, 2], [1, 1, 3]));
+      // console.log(addArrays([1, 2, 3], [4, 5, 6]));
+    </script>
+
+    <!-- 11k. -->
+
+    <script>
+      // function countPositive(nums) {
+      //   let result = 0;
+
+      //   for (let i = 0; i < nums.length; i++) {
+      //     if (nums[i] > 0) {
+      //       result++;
+      //     }
+      //   }
+      //   return result;
+      // }
+
+      // console.log(countPositive([1, -3, 5]));
+      // console.log(countPositive([-2, 3, -5, 7, 10]));
+    </script>
+
+    <!-- Challenge Exercises -->
+    <!-- 11l -->
+
+    <script>
+      // function minMax(nums) {
+      //   // Chúng ta sẽ đặt giá trị bắt đầu là min và max
+      //   // là giá trị đầu tiên trong mảng. (đây là
+      //   // 1 cách đặt giá trị ban đầu)
+      //   const result = {
+      //     min: nums[0],
+      //     max: nums[0],
+      //   };
+
+      //   for (let i = 0; i < nums.length; i++) {
+      //     const value = nums[i];
+
+      //     // Nếu giá trị nhỏ hơn giá trị min
+      //     // thì chúng ta sẽ cập nhật min
+      //     if (value < result.min) {
+      //       result.min = value;
+      //     }
+
+      //     if (value > result.max) {
+      //       result.max = value;
+      //     }
+      //   }
+      //   return result;
+      // }
+
+      // console.log(minMax([1, -3, 5]));
+      // console.log(minMax([-2, 3, -5, 7, 10]));
+    </script>
+
+    <!-- 11m. -->
+
+    <script>
+      // function minMax(nums) {
+      //   // chúng ta đặt giá trị ban đầu là min và max
+      //   // để là null
+      //   const result = {
+      //     min: null,
+      //     max: null,
+      //   };
+
+      //   for (let i = 0; i < nums.length; i++) {
+      //     const value = nums[i];
+
+      //     // Nếu min là null hoặc nhỏ hơn min thì cập nhật min
+
+      //     if (result.min === null || value < result.min) {
+      //       result.min = value;
+      //     }
+      //     // Nếu min là null hoặc nhỏ hơn min thì cập nhật min
+
+      //     if (result.max === null || value > result.max) {
+      //       result.max = value;
+      //     }
+
+      //     // chúng ta phải sử dụng 2 câu lệnh if
+      //     // một câu lệnh if-else. Điều này đảm bảo
+      //     // min và max đều là giá trị null
+      //   }
+      //   return result;
+      // }
+      // console.log(minMax([1, -3, 5]));
+      // console.log(minMax([-2, 3, -5, 7, 10]));
+
+      // console.log(minMax([]));
+      // console.log(minMax([3]));
+    </script>
+
+    <!-- 11n. -->
+
+    <script>
+      function countWords(words) {
+        const result = {};
+
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+
+          // result[word] thêm/ truy cập một tài sản sử dụng bất cứ thứ j
+          // đc lưu trong biến 'word'
+          // Nếu word = 'apple', result[word] sẽ thực hiện trong result['apple']
+          // if word = 'grap', result[word] sẽ thực hiện trong result['grap']
+          if (!result[word]) {
+            result[word] = 1;
+          } else {
+            result[word]++;
+          }
+        }
+        return result;
+      }
+
+      console.log(["apple", "grape", "apple", "apple"]);
+    </script>
+  </body>
+</html>

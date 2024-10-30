@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <!-- 12a. -->
+    <script>
+      //   const add = function () {
+      //     console.log(2 + 3);
+      //   };
+
+      //   add();
+      //   add();
+    </script>
+    <!-- 12b. -->
+
+    <script>
+      //   const add = function () {
+      //     console.log(2 + 3);
+      //   };
+
+      //   add();
+      //   add();
+
+      //   function runTwice(fun) {
+      //     fun();
+      //     fun();
+      //   }
+
+      //   runTwice(function () {
+      //     console.log("12b");
+      //   });
+      //   runTwice(add);
+    </script>
+
+    <!-- 12c. -->
+
+    <div>
+      <!-- <button
+        class="js-button"
+        onclick="
+      updateButton();
+    "
+      >
+        Start
+      </button>
+
+      <script>
+        // Grouping the JavaScript code into a function
+        // is optional, but it is a bit cleaner.
+        function updateButton() {
+          const button = document.querySelector(".js-button");
+
+          setTimeout(function () {
+            button.innerHTML = "Finished!";
+          }, 1000);
+        } -->
+      </script>
+    </div>
+
+    <!-- 12d. -->
+    <div>
+
+        <!-- <button class="js-button" onclick="updateButton();">Start</button>
+        <script>
+            function updateButton(){
+                const button = document.querySelector(".js-button");
+
+                button.innerHTML = "Loading...!";
+
+                setTimeout(function(){
+                    button.innerHTML = "Finished!";
+                }, 1000)
+            }
+        </script> -->
+    </div>
+
+    <!-- 12e. -->
+    <div>
+        <!-- <button class="js-button" onclick="displayMessage();">
+            Add to cart
+        </button>
+
+        <p class="js-message"></p>
+
+        <script>
+            function displayMessage(){
+                const messageElement = document.querySelector('.js-message');
+                messageElement.innerHTML = "Added";
+
+               setTimeout(function(){
+                messageElement.innerHTML = ''
+               }, 2000)
+            } -->
+            
+        </script>
+    </div>
+
+    <!-- Exercises -->
+     <!-- 12f. -->
+
+     <div>
+        <!-- <button class="js-button" onclick="displayMessage();">
+            Add to Cart
+        </button>
+
+        <p class="js-message"></p>
+
+        <script>
+
+            let timeoutId;
+
+            function displayMessage(){
+                const messageElement = document.querySelector('.js-message');
+                messageElement.innerHTML = "Added";
+
+                // Đầu tiên Hủy thời gian chờ trc đó
+            // Nó ko bị xóa quá nhanh
+
+                clearTimeout(timeoutId);
+
+              clearTimeout = setTimeout(function(){
+                    messageElement.innerHTML = " ";
+
+                }, 2000)
+               
+            } -->
+        </script>
+     </div>
+
+     <!-- 12g. -->
+
+     <script>
+        // setInterval(function(){
+        //     if (document.title === "App"){
+        //         document.title = '(2) New Message';
+        //     }else{
+        //         document.title = 'App'
+        //     }
+        // }, 1000)
+     </script>
+
+     <!-- 12h. -->
+
+     <div>
+        <!-- <button onclick="message++">Add</button>
+
+     <button onclick="message--">Remove</button>
+
+     <script>
+        let message = 2;
+        
+        setInterval(function(){
+            if (document.title === "App"){
+                document.title = `(${message}) new message`;
+            }else{
+                document.title = "App"
+            }
+        }, 1000)
+     </script> -->
+     </div>
+    <!-- 12i -->
+        <!--
+        Lưu ý: Đây chỉ là một giải pháp mẫu. Có thể có các giải pháp khác
+        nên đừng lo lắng nếu
+        giải pháp của bạn trông khác.
+        -->
+    <button onclick="
+      messages++;
+      displayNotification();
+    ">Add</button>
+
+    <button onclick="
+      if (messages > 0) {
+        messages--;
+
+        // Nếu không có tin nhắn mới, hãy dừng hiển thị
+        // thông báo trong tab.
+        if (messages === 0) {
+          stopNotification();
+        }
+      }
+    ">Remove</button>
+
+    <script>
+      let messages = 2;
+
+      // Lưu intervalId trong trường hợp chúng ta cần hủy nó.
+      let intervalId;
+
+      // Chúng ta sẽ sử dụng biến này để theo dõi xem
+      // hoặc không chúng tôi sẽ hiển thị thông báo.
+      let isDisplayingNotification;
+
+      // Bắt đầu hiển thị thông báo trong tab
+      // khi trang đầu tiên được tải.
+      displayNotification();
+
+      function displayNotification() {
+        // Nếu chúng ta đã hiển thị thông báo,
+        // hãy dừng hàm này vì chúng ta không muốn
+        // tạo 2 khoảng thời gian cùng một lúc.
+        if (isDisplayingNotification) {
+          return;
+        }
+
+        isDisplayingNotification = true;
+
+        intervalId = setInterval(function() {
+          if (document.title === 'App') {
+            document.title = `(${messages}) New messages`;
+          } else {
+            document.title = 'App';
+          }
+        }, 1000);
+      }
+
+      function stopNotification() {
+        isDisplayingNotification = false;
+
+        clearInterval(intervalId);
+        document.title = 'App';
+      }
+    </script>
+  </body>
+</html>

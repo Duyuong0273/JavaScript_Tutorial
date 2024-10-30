@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <!-- 9a. -->
+    <div>
+      <!-- <button>9a</button>
+
+    <script>
+      console.log(document.querySelector("button"));
+    </script> -->
+    </div>
+
+    <!-- 9b. -->
+    <div>
+      <!-- 
+    <button>9a</button>
+    <button class="js-button">9b</button>
+
+    <script>
+      console.log(document.querySelector("button"));
+
+      console.log(document.querySelector(".js-button"));
+    </script> -->
+    </div>
+
+    <!-- 9c. -->
+    <div>
+      <!-- <button
+        onclick="
+    document.querySelector('.js-choice').innerHTML = 'You choice: heads'
+    "
+      >
+        heads
+      </button>
+
+      <button
+        onclick="
+    document.querySelector('.js-choice').innerHTML = 'You choice: tails'
+    "
+      >
+        tails
+      </button>
+
+      <p class="js-choice"></p> -->
+    </div>
+
+    <!-- 9d. -->
+    <div>
+      <!-- <input class="js-name-input" placeholder="Name" />
+
+      <button
+        onclick="
+    const inputElement = document.querySelector('.js-name-input')
+    document.querySelector('.js-message')
+    .innerHTML = `Your name is: ${inputElement.value}`
+    "
+      >
+        Submit
+      </button>
+
+      <p class="js-message"></p> -->
+    </div>
+
+    <!-- 9e. -->
+    <div>
+      <!-- <input
+        class="js-name-input"
+        placeholder="Name"
+        onkeydown="
+   if (event.key === 'Enter'){
+      const inputElement = document.querySelector('.js-name-input')
+    document.querySelector('.js-message')
+    .innerHTML = `Your name is: ${inputElement.value}`
+   }
+    "
+      />
+
+      <button
+        onclick="
+    const inputElement = document.querySelector('.js-name-input')
+    document.querySelector('.js-message')
+    .innerHTML = `Your name is: ${inputElement.value}`
+    "
+      >
+        Submit
+      </button>
+
+      <p class="js-message"></p> -->
+    </div>
+
+    <!-- 9f. -->
+    <div>
+      <!-- <input
+        class="js-name-input"
+        placeholder="Name"
+        onkeydown="
+  if(event.key === 'Enter'){
+    displayMessage();
+  }
+    "
+      />
+
+      <button
+        onclick="
+   displayMessage();
+    "
+      >
+        Submit
+      </button>
+
+      <p class="js-message"></p>
+
+      <script>
+        function displayMessage() {
+          const inputElement = document.querySelector(".js-name-input");
+          document.querySelector(
+            ".js-message"
+          ).innerHTML = `Your name is: ${inputElement.value}`;
+        }
+      </script> -->
+    </div>
+    <!-- 9g -->
+    <div>
+      <!-- <input
+        class="js-cost-input"
+        placeholder="Cost of order"
+        onkeydown="
+    handleCostKeydown(event);
+    "
+      />
+
+      <button
+        onclick="
+    calculateTotal();
+    "
+      >
+        Calculate
+      </button>
+
+      <p class="js-total-cost"></p>
+
+      <script>
+        function handleCostKeydown(event) {
+          if (event.key === "Enter") {
+            calculateTotal();
+          }
+        }
+
+        function calculateTotal() {
+          const inputElement = document.querySelector(".js-cost-input");
+
+          let cost = Number(inputElement.value) * 100;
+
+          if (cost < 4000) {
+            cost += 1000;
+          }
+
+          document.querySelector(".js-total-cost").innerHTML = `$${cost / 100}`;
+        }
+      </script> -->
+    </div>
+
+    <!-- 9h -->
+
+    <div>
+      <!-- <input
+        class="js-input"
+        placeholder="text"
+        onkeyup="
+    const inputElement = document.querySelector('.js-input');
+    document.querySelector('.js-message').innerHTML = inputElement.value
+    "
+      />
+
+      <p class="js-message"></p> -->
+    </div>
+
+    <!-- 9i -->
+    <div>
+      <!-- <button
+        onclick="
+     displayCartQuatity();
+    "
+      >
+        Show Quantity
+      </button>
+
+      <button
+        onclick="
+      updateCartQuantity(1);
+    "
+      >
+        Add to Cart
+      </button>
+
+      <button
+        onclick="
+      updateCartQuantity(2);
+    "
+      >
+        +2
+      </button>
+
+      <button
+        onclick="
+      updateCartQuantity(3);
+    "
+      >
+        +3
+      </button>
+
+      <button
+        onclick="
+      updateCartQuantity(4);
+    "
+      >
+        +4
+      </button>
+
+      <button
+        onclick="
+      updateCartQuantity(5);
+    "
+      >
+        +5
+      </button>
+
+      <button
+        onclick="
+      updateCartQuantity(-1);
+    "
+      >
+        Remove from cart
+      </button>
+
+      <button
+        onclick="
+      updateCartQuantity(-2);
+    "
+      >
+        -2
+      </button>
+
+      <button
+        onclick="
+      updateCartQuantity(-3);
+    "
+      >
+        -3
+      </button>
+
+      <button
+        onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+      console.log(`Cart quantity: ${cartQuantity}`);
+    "
+      >
+        Reset Cart
+      </button>
+
+      <p class="js-cart-quantity"></p>
+
+      <script>
+        let cartQuantity = 0;
+
+        displayCartQuatity();
+
+        function updateCartQuantity(change) {
+          if (cartQuantity + change > 10) {
+            alert("The cart is full");
+            return;
+          }
+
+          if (cartQuantity + change < 0) {
+            alert("Not enough items in the cart");
+            return;
+          }
+
+          cartQuantity += change;
+          // Display the cart quantity after updating.
+          displayCartQuatity();
+        }
+
+        function displayCartQuatity() {
+          document.querySelector(
+            ".js-cart-quantity"
+          ).innerHTML = `Cart quantity: ${cartQuantity}`;
+        }
+      </script> -->
+    </div>
+
+    <!-- 9j -->
+    <p>
+      <!-- Create an element to display the calculation. -->
+    </p>
+
+    <p class="js-calculation"></p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculation('1');
+      "
+      >
+        1
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('2');
+      "
+      >
+        2
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('3');
+      "
+      >
+        3
+      </button>
+
+      <button
+        onclick="
+        updateCalculation(' + ');
+      "
+      >
+        +
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculation('4');
+      "
+      >
+        4
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('5');
+      "
+      >
+        5
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('6');
+      "
+      >
+        6
+      </button>
+
+      <button
+        onclick="
+        updateCalculation(' - ');
+      "
+      >
+        -
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculation('7');
+      "
+      >
+        7
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('8');
+      "
+      >
+        8
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('9');
+      "
+      >
+        9
+      </button>
+
+      <button
+        onclick="
+        updateCalculation(' * ');
+      "
+      >
+        *
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculation('0');
+      "
+      >
+        0
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('.');
+      "
+      >
+        .
+      </button>
+
+      <button
+        onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      "
+      >
+        =
+      </button>
+
+      <button
+        onclick="
+        updateCalculation(' / ');
+      "
+      >
+        /
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        calculation = '';
+
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      "
+      >
+        Clear
+      </button>
+    </p>
+
+    <script>
+      let calculation = localStorage.getItem("calculation") || "";
+
+      // Display the calculation when the page first loads.
+      displayCalculation();
+
+      function updateCalculation(value) {
+        calculation += value;
+
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+
+        localStorage.setItem("calculation", calculation);
+      }
+
+      function displayCalculation() {
+        document.querySelector(".js-calculation").innerHTML = calculation;
+      }
+    </script>
+  </body>
+</html>

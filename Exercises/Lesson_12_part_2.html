@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <!-- 12j. -->
+
+    <script>
+      //   const multiply = (a, b) => {
+      //     return a * b;
+      //   };
+      //   console.log(multiply(2, 3));
+      //   console.log(multiply(7, 10));
+    </script>
+    <!-- 12k. -->
+
+    <script>
+      //   const multiply = (a, b) => a * b;
+      //   console.log(multiply(2, 3));
+      //   console.log(multiply(7, 10));
+    </script>
+
+    <!-- 12l. -->
+
+    <script>
+      //   function countPositive(nums) {
+      //     let positiveNumber = 0;
+
+      //     // Khi chỉ có 1 tham số
+      //     // Dấu ngoặc này là tùy chọn vì thế
+      //     // cta có thế viết num => {...}
+
+      //     nums.forEach((num) => {
+      //       if (num > 0) {
+      //         positiveNumber++;
+      //       }
+      //     });
+      //     return positiveNumber;
+      //   }
+
+      //   console.log(countPositive([1, -3, 5]));
+      //   console.log(countPositive([-2, 3, -5, 7, 10]));
+    </script>
+
+    <!-- 12m. -->
+
+    <script>
+      //   function addNum(array, num) {
+      //     // khi chỉ có 1 tham số
+      //     // dấu ngoặc là tùy chọn.
+      //     // cũng có thể viết value => value + num
+      //     return array.map((value) => value + num);
+      //   }
+      //   console.log(addNum([1, 2, 3], 2));
+      //   console.log(addNum([-2, -1, 0, 99], 2));
+    </script>
+
+    <!-- 12n. -->
+
+    <script>
+      // function removeEgg(foods) {
+      //   // Nếu thức ăn là "egg", hàm bên trong trả về false
+      //   // và thức ăn không có trong kết quả
+      //   // Ngược lại hàm bên trong trả về true
+      //   // và thực phẩm đc bao gồm trong kết quả
+      //   return foods.filter((food) => food !== "egg");
+      // }
+      // console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+    </script>
+
+    <!-- 12o. -->
+
+    <script>
+      // function removeEgg(foods) {
+      //   let eggsRemove = 0;
+
+      //   return foods.filter((food) => {
+      //     // Nếu thức ăn là trứng thì return về false;
+      //     // nhưng chỉ khi cta chưa loại bỏ 2 quả trứng
+
+      //     if (food === "egg" && eggsRemove < 2) {
+      //       eggsRemove++;
+      //       return false;
+      //     }
+      //     return true;
+      //   });
+      // }
+      // console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+    </script>
+
+    <!-- 12p. -->
+
+    <!-- 12c. -->
+
+    <div>
+      <!-- <button
+        class="js-button"
+        onclick="
+      updateButton();
+    "
+      >
+        Start
+      </button>
+
+      <script>
+        // Grouping the JavaScript code into a function
+        // is optional, but it is a bit cleaner.
+        function updateButton() {
+          const button = document.querySelector(".js-button");
+
+          setTimeout(() => {
+            button.innerHTML = "Finished!";
+          }, 1000);
+        }
+      </script> -->
+
+      <!-- 12i. -->
+
+      <!--
+        Lưu ý: Đây chỉ là một giải pháp mẫu. Có thể có các giải pháp khác
+        nên đừng lo lắng nếu
+        giải pháp của bạn trông khác.
+        -->
+      <!-- <button
+        onclick="
+      messages++;
+      displayNotification();
+    "
+      >
+        Add
+      </button>
+
+      <button
+        onclick="
+      if (messages > 0) {
+        messages--;
+
+        // Nếu không có tin nhắn mới, hãy dừng hiển thị
+        // thông báo trong tab.
+        if (messages === 0) {
+          stopNotification();
+        }
+      }
+    "
+      >
+        Remove
+      </button>
+
+      <script>
+        let messages = 2;
+
+        // Lưu intervalId trong trường hợp chúng ta cần hủy nó.
+        let intervalId;
+
+        // Chúng ta sẽ sử dụng biến này để theo dõi xem
+        // hoặc không chúng tôi sẽ hiển thị thông báo.
+        let isDisplayingNotification;
+
+        // Bắt đầu hiển thị thông báo trong tab
+        // khi trang đầu tiên được tải.
+        displayNotification();
+
+        function displayNotification() {
+          // Nếu chúng ta đã hiển thị thông báo,
+          // hãy dừng hàm này vì chúng ta không muốn
+          // tạo 2 khoảng thời gian cùng một lúc.
+          if (isDisplayingNotification) {
+            return;
+          }
+
+          isDisplayingNotification = true;
+
+          intervalId = setInterval(() => {
+            if (document.title === "App") {
+              document.title = `(${messages}) New messages`;
+            } else {
+              document.title = "App";
+            }
+          }, 1000);
+        }
+
+        function stopNotification() {
+          isDisplayingNotification = false;
+
+          clearInterval(intervalId);
+          document.title = "App";
+        }
+      </script> -->
+    </div>
+
+    <!-- 12q. -->
+
+    <!-- 12c. -->
+
+    <div>
+      <!-- <button class="js-button">Start</button>
+
+      <script>
+        document.querySelector(".js-button").addEventListener("click", () => {
+          const button = document.querySelector(".js-button");
+
+          // The function below was changed
+          // to an arrow function.
+          setTimeout(() => {
+            button.innerHTML = "Finished!";
+          }, 1000);
+        });
+      </script> -->
+      <!-- 12i. -->
+
+      <!--
+        Lưu ý: Đây chỉ là một giải pháp mẫu. Có thể có các giải pháp khác
+        nên đừng lo lắng nếu
+        giải pháp của bạn trông khác.
+        -->
+      <!-- <button
+        onclick="
+      messages++;
+      displayNotification();
+    "
+      >
+        Add
+      </button>
+
+      <button
+        onclick="
+      if (messages > 0) {
+        messages--;
+
+        // Nếu không có tin nhắn mới, hãy dừng hiển thị
+        // thông báo trong tab.
+        if (messages === 0) {
+          stopNotification();
+        }
+      }
+    "
+      >
+        Remove
+      </button>
+
+      <script>
+        let messages = 2;
+
+        // Lưu intervalId trong trường hợp chúng ta cần hủy nó.
+        let intervalId;
+
+        // Chúng ta sẽ sử dụng biến này để theo dõi xem
+        // hoặc không chúng tôi sẽ hiển thị thông báo.
+        let isDisplayingNotification;
+
+        // Bắt đầu hiển thị thông báo trong tab
+        // khi trang đầu tiên được tải.
+        displayNotification();
+
+        function displayNotification() {
+          // Nếu chúng ta đã hiển thị thông báo,
+          // hãy dừng hàm này vì chúng ta không muốn
+          // tạo 2 khoảng thời gian cùng một lúc.
+          if (isDisplayingNotification) {
+            return;
+          }
+
+          isDisplayingNotification = true;
+
+          intervalId = setInterval(() => {
+            if (document.title === "App") {
+              document.title = `(${messages}) New messages`;
+            } else {
+              document.title = "App";
+            }
+          }, 1000);
+        }
+
+        function stopNotification() {
+          isDisplayingNotification = false;
+
+          clearInterval(intervalId);
+          document.title = "App";
+        }
+      </script> -->
+    </div>
+
+    <!-- Excercises -->
+
+    <!-- 12r. -->
+  </body>
+</html>

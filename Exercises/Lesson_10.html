@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML- CSS and JavaScript</title>
+    <!-- <style>
+      .add-btn {
+        background-color: rgb(255, 216, 20);
+        border: none;
+        padding: 10px 60px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-family: arial;
+      }
+      .request-btn {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-weight: bold;
+      }
+      .schedule-btn {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        border-radius: 5px;
+        border: none;
+        padding: 10px 40px;
+        font-weight: bold;
+      }
+    </style> -->
+    <!-- <style>
+      .toggle-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+    </style> -->
+    <!-- 10e. -->
+    <style>
+      .toggle-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+    </style>
+    <!-- 10h. -->
+    <!-- <style>
+      body {
+        font-family: Arial;
+      }
+
+      .cost-input {
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .calculate-button {
+        background-color: green;
+        color: white;
+        border: none;
+        font-size: 15px;
+        padding: 12px 15px;
+        cursor: pointer;
+      }
+
+      /* Give the error message a red color. */
+      .error-message {
+        color: red;
+      }
+    </style> -->
+  </head>
+  <body>
+    <div>
+      <!-- 10a. -->
+      <!-- <button class="add-btn">Add to Cart</button> -->
+      <!-- 10b. -->
+      <!-- <button class="request-btn">Request now</button> -->
+      <!-- 10c. -->
+      <!-- <button class="schedule-btn">Schedule later</button> -->
+    </div>
+    <div>
+      <!-- <button
+        class="toggle-button js-button"
+        onclick="
+      const button = document.querySelector('.js-button');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    "
+      >
+        Gaming
+      </button> -->
+    </div>
+    <div>
+      <!-- <button class="js-button">Test</button>
+
+      <script>
+        // I used the variable name 'button' because
+        // it's shorter, but feel free to use whatever
+        // variable name you want.
+        const button = document.querySelector(".js-button");
+        console.log(button.classList.contains("js-button"));
+      </script> -->
+    </div>
+    <!-- 10e. -->
+    <div>
+      <!-- <button
+        class="toggle-button js-button"
+        onclick="
+      const button = document.querySelector('.js-button');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    "
+      >
+        Gaming
+      </button>
+
+      <button
+        class="toggle-button js-button-2"
+        onclick="
+      const button = document.querySelector('.js-button-2');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    "
+      >
+        Music
+      </button>
+
+      <button
+        class="toggle-button js-button-3"
+        onclick="
+      const button = document.querySelector('.js-button-3');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    "
+      >
+        Tech
+      </button> -->
+    </div>
+    <!--10g.  -->
+    <!-- 10h. -->
+    <!-- <div>
+      <p>Amazon Shipping Calculator</p>
+      <input
+        placeholder="Cost of order"
+        class="js-cost-input cost-input"
+        onkeydown="
+      handleCostKeydown(event);
+    "
+      />
+      <button
+        onclick="
+      calculateTotal();
+    "
+        class="calculate-button"
+      >
+        Calculate
+      </button>
+      <p class="js-total-cost"></p>
+
+      <p class="js-error-message error-message"></p>
+
+      <script>
+        function handleCostKeydown(event) {
+          if (event.key === "Enter") {
+            calculateTotal();
+          }
+        }
+
+        function calculateTotal() {
+          const inputElement = document.querySelector(".js-cost-input");
+          let cost = Number(inputElement.value);
+
+          // First, reset all previous messages.
+          document.querySelector(".js-total-cost").innerHTML = "";
+          document.querySelector(".js-error-message").innerHTML = "";
+
+          if (cost < 0) {
+            document.querySelector(".js-error-message").innerHTML =
+              "Error: cost cannot be less than $0";
+            // If we display an error, we can use return to
+            // end this function immediately. This is called
+            // an "early return" and it makes the code cleaner
+            // because it reduces nesting / indents.
+            return;
+          }
+
+          if (cost < 40) {
+            cost = cost + 10;
+          }
+
+          document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+        }
+      </script>
+    </div> -->
+  </body>
+</html>

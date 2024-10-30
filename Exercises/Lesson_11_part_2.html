@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array and loops part 2</title>
+  </head>
+  <body>
+    <!-- 11o. -->
+
+    <script>
+      // let words = ["hello", "world", "search", "good"];
+
+      // // Đặt index = -1 khi bắt đầu (vậy cta sẽ giả sử
+      // // string 'search' ko tồn tại trong mảng).
+      // // Nếu tìm thấy string "search" trong mảng, cta
+      // // sẽ cập nhật index
+
+      // let index = -1;
+
+      // for (let i = 0; i < words.length; i++) {
+      //   if (words[i] === "search") {
+      //     index = i;
+      //   }
+      // }
+
+      // console.log(index);
+
+      // words = ["not", "found"];
+      // index = -1;
+
+      // for (let i = 0; i < words.length; i++) {
+      //   if (words[i] === "search") {
+      //     index = i;
+      //   }
+      // }
+
+      // console.log(index);
+    </script>
+
+    <!-- 11p. -->
+
+    <script>
+      // let words = ["hello", "world", "search", "good", "search"];
+      // let index = -1;
+
+      // for (let i = 0; i < words.length; i++) {
+      //   if (words[i] === "search") {
+      //     index = i;
+
+      //     // khi tìm thấy 'search' thoát ra lập tức
+      //     // vòng lặp của tôi muốn chỉ index của
+      //     // lần xuất hiện đầu tiên của 'search'
+      //     break;
+      //   }
+      // }
+      // console.log(index);
+
+      // words = ["not", "found"];
+      // index = -1;
+      // for (let i = 0; i < words.length; i++) {
+      //   if (words[i] === "search") {
+      //     index = i;
+      //     break;
+      //   }
+      // }
+      // console.log(index);
+    </script>
+
+    <!-- 11q. -->
+
+    <script>
+      // function findIndex(array, word) {
+      //   for (let i = 0; i < array.length; i++) {
+      //     if (array[i] === word) {
+      //       // thay vì tạo bộ tích lũy
+      //       // Biến và cập nhật theo vòng lặp
+      //       // cta có thể return i trực tiếp
+      //       //có thể tìm thấy nó vì đây là 1 hàm
+      //       return i;
+      //     }
+      //   }
+
+      //   // Nếu bây giờ hàm chưa đc trả về
+      //   // về mặt logic thì đó là ko đc
+      //   // tồn tại trong array nên cta trả về -1
+      //   return -1;
+      // }
+    </script>
+
+    <!-- 11r. -->
+    <script>
+      // function removEgg(foods) {
+      //   const result = [];
+
+      //   for (let i = 0; i < foods.length; i++) {
+      //     // Nếu string "egg" thì tiếp tục
+      //     if (foods[i] === "egg") {
+      //       continue;
+      //     }
+      //     // Ở đây cta không cần else vì
+      //     // cách duy nhất để đạt đc mã nầy nếu
+      //     // câu lệnh if ở trên là sai
+      //     result.push(foods[i]);
+      //   }
+      //   return result;
+      // }
+
+      // console.log(removEgg(["egg", "apple", "egg", "egg", "ham"]));
+    </script>
+
+    <!-- 11s. -->
+
+    <script>
+      // function removeEgg(foods) {
+      //   const result = [];
+      //   let eggRemoved = 0;
+
+      //   for (let i = 0; i < foods.length; i++) {
+      //     // chỉ bỏ qua 'egg' nếu cta loại bỏ ít hơn 2
+      //     // Việc này phải thực hiện trc khi tiếp tục nếu không
+      //     // Thực hiện continue trc nếu ko bỏ qua đoạn mã này
+      //     if (foods[i] === "egg" && eggRemoved < 2) {
+      //       eggRemoved++;
+      //       continue;
+      //     }
+      //     result.push(foods[i]);
+      //   }
+      //   return result;
+      // }
+      // console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+    </script>
+
+    <!-- 11t. -->
+
+    <script>
+      // function removeEgg(foods) {
+      //   // Bước 1: Đảo ngược mảng để xử lý từ cuối lên
+      //   const reversedFoods = foods.reverse();
+
+      //   // Bước 2: Khởi tạo mảng kết quả và biến đếm số trứng đã loại
+      //   const result = [];
+      //   let eggRemoved = 0;
+
+      //   // Bước 3: Duyệt qua từng phần tử
+      //   for (let i = 0; i < reversedFoods.length; i++) {
+      //     // Kiểm tra nếu là trứng và chưa loại đủ 2 quả
+      //     if (reversedFoods[i] === "egg" && eggRemoved < 2) {
+      //       eggRemoved++; // Tăng số trứng đã loại
+      //       continue; // Bỏ qua phần tử này
+      //     }
+
+      //     // Thêm phần tử không phải trứng hoặc trứng còn lại vào kết quả
+      //     result.push(reversedFoods[i]);
+      //   }
+
+      //   // Bước 4: Đảo ngược lại mảng kết quả để có thứ tự đúng
+      //   return result.reverse();
+      // }
+
+      // console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+      // // Kết quả: ["egg", "apple", "ham"]
+    </script>
+
+    <!--11u  -->
+    <script>
+      // function removeEgg(foods) {
+      //   // Bước 1: Tạo bản sao để không ảnh hưởng mảng gốc
+      //   const foodsCopy = foods.slice();
+
+      //   // Bước 2: Đảo ngược bản sao
+      //   const reversedFoods = foodsCopy.reverse();
+
+      //   // Bước 3: Khởi tạo mảng kết quả và biến đếm
+      //   const result = [];
+      //   let eggRemoved = 0; // Đổi thành let để có thể thay đổi giá trị
+
+      //   // Bước 4: Duyệt qua từng phần tử
+      //   for (let i = 0; i < reversedFoods.length; i++) {
+      //     // Kiểm tra nếu là trứng và chưa loại đủ 2 quả
+      //     if (reversedFoods[i] === "egg" && eggRemoved < 2) {
+      //       eggRemoved++;
+      //       continue;
+      //     }
+      //     result.push(reversedFoods[i]);
+      //   }
+
+      //   // Bước 5: Đảo ngược lại kết quả
+      //   return result.reverse();
+      // }
+
+      // const foods = ["egg", "apple", "egg", "egg", "egg", "ham"];
+      // console.log(removeEgg(foods));
+      // // Kết quả: ["egg", "egg", "apple", "egg", "ham"]
+    </script>
+
+    <!-- Challenge excerises-->
+
+    <!-- 11v. -->
+    <script>
+      // for (let i = 1; i <= 20; i++) {
+      //   if (i % 3 === 0 && i % 5 === 0) {
+      //     console.log("FizzBuzz");
+      //   } else if (i % 3 === 0) {
+      //     console.log("Fizz");
+      //   } else if (i % 5 === 0) {
+      //     console.log("Buzz");
+      //   } else {
+      //     console.log(i);
+      //   }
+      // }
+    </script>
+
+    <!-- 11x. -->
+
+    <script>
+      function findIndex(array, word) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === word) {
+            return i;
+          }
+        }
+
+        return -1;
+      }
+
+      function unique(array) {
+        const result = [];
+
+        for (let i = 0; i < array.length; i++) {
+          const word = array[i];
+
+          // Using the findIndex() function from above, we
+          // can check if the string is already in the
+          // result array. If it's not in the result array
+          // (index is -1), then add it to the result array.
+          if (findIndex(result, word) === -1) {
+            result.push(word);
+          }
+        }
+
+        return result;
+      }
+
+      console.log(unique(["green", "red", "blue", "red"]));
+      console.log(unique(["red", "green", "green", "red"]));
+    </script>
+  </body>
+</html>
