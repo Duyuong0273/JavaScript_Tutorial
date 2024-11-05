@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libraries, MVC</title>
+  </head>
+  <body>
+    <!-- 15a. -->
+    <script type="module">
+      //   import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+
+      //   const today = dayjs();
+      //   const date = today.add(5, "days");
+      //   console.log(date.format("MMMM D"));
+    </script>
+
+    <!-- 15b. -->
+
+    <script type="module">
+      //   import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+
+      //   const today = dayjs();
+      //   const date = today.add(1, "month");
+      //   console.log(date.format("MMMM D"));
+    </script>
+
+    <!-- 15c. -->
+
+    <script type="module">
+      //   import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+
+      //   const today = dayjs();
+      //   const date = today.subtract(1, "month");
+      //   console.log(date.format("MMMM D"));
+    </script>
+
+    <!-- 15d. -->
+    <script type="module">
+      //   import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+
+      //   const date = dayjs();
+      //   console.log(date.format("dddd"));
+    </script>
+
+    <!-- 15e. -->
+
+    <script type="module">
+      //   import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+
+      //   function isWeekend(date) {
+      //     const dayOfWeek = date.format("dddd");
+      //     return dayOfWeek === "Saturday" || dayOfWeek === "Sunday";
+      //   }
+
+      //   //Test this function using a few different dates
+
+      //   let date = dayjs();
+      //   console.log(date.format("dddd, MMMM D"));
+      //   console.log(isWeekend(date));
+
+      //   date = dayjs().add(2, "day");
+      //   console.log(date.format("dddd, MMMM D"));
+      //   console.log(isWeekend(date));
+
+      //   date = dayjs().add(4, "day");
+      //   console.log(date.format("dddd, MMMM D"));
+      //   console.log(isWeekend(date));
+
+      //   date = dayjs().add(6, "day");
+      //   console.log(date.format("dddd, MMMM D"));
+      //   console.log(isWeekend(date));
+    </script>
+
+    <!-- 15f. -->
+
+    <script type="module">
+      //   import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+      //   import isWeekend from "./script/15f.js";
+
+      //   let date = dayjs();
+      //   console.log(date.format("dddd, MMMM D"));
+      //   console.log(isWeekend(date));
+
+      //   date = dayjs().add(2, "day");
+      //   console.log(date.format("dddd, MMMM D"));
+      //   console.log(isWeekend(date));
+
+      //   date = dayjs().add(4, "day");
+      //   console.log(date.format("dddd, MMMM D"));
+      //   console.log(isWeekend(date));
+
+      //   date = dayjs().add(6, "day");
+      //   console.log(date.format("dddd, MMMM D"));
+      //   console.log(isWeekend(date));
+    </script>
+
+    <!-- 15g. -->
+    <script type="module">
+      import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+      import isSatSun from "./15f.js";
+
+      // Test this function using a few different dates.
+      let date = dayjs();
+      console.log(date.format("dddd, MMMM D"));
+      console.log(isSatSun(date));
+
+      date = dayjs().add(2, "day");
+      console.log(date.format("dddd, MMMM D"));
+      console.log(isSatSun(date));
+
+      date = dayjs().add(4, "day");
+      console.log(date.format("dddd, MMMM D"));
+      console.log(isSatSun(date));
+
+      date = dayjs().add(6, "day");
+      console.log(date.format("dddd, MMMM D"));
+      console.log(isSatSun(date));
+    </script>
+  </body>
+</html>
